@@ -15,7 +15,8 @@ int pack::stream(int packet){
 		return -1;
 	}
 	printf("Bit Recieved=%i",response);
-return response;
+	printf("%i",response);
+	return response;
 }
 
 pack::pack(){
@@ -23,5 +24,6 @@ pack::pack(){
 }
 
 pack::~pack(){
+	printf("finished reading packets\n");
 }
 

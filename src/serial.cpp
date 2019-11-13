@@ -1,7 +1,10 @@
 #include <serial.h>
 #include <iostream>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2f96f161bd9a0a73f49660338be085e86cfed43b
 int fd; 
 
 /*initialize robot*/
@@ -55,7 +58,11 @@ int serial::init(const char *yungin){
 
 
 int serial::startIO(){
+<<<<<<< HEAD
 	uint8_t startBit[]={128};
+=======
+	unsigned char startBit[]={128};
+>>>>>>> 2f96f161bd9a0a73f49660338be085e86cfed43b
 	if (write(fd,startBit,sizeof(startBit))==-1){
 		perror("failed to open serial port");
 		return -1;
@@ -68,7 +75,11 @@ int serial::startIO(){
 int serial::setMode(int mode){
 	 //safe mode
 	if(mode==1){
+<<<<<<< HEAD
 		uint8_t command[]={131};
+=======
+		unsigned char command[]={131};
+>>>>>>> 2f96f161bd9a0a73f49660338be085e86cfed43b
 		if (write(fd,command, sizeof(command))==-1){
 			perror("mode set failed");
 			return -1;
@@ -77,7 +88,11 @@ int serial::setMode(int mode){
 	}
 	//full mode	
 	else if(mode==2){
+<<<<<<< HEAD
 		uint8_t command[]={132};
+=======
+		unsigned char command[]={132};
+>>>>>>> 2f96f161bd9a0a73f49660338be085e86cfed43b
 		if (write(fd,command, sizeof(command))==-1){
 	 		perror("mode set failed");
 	 		return -1;
@@ -86,7 +101,11 @@ int serial::setMode(int mode){
 	}
 	//passive mode
 	else if(mode==3){
+<<<<<<< HEAD
 		uint8_t command[]={128};//passive 
+=======
+		unsigned char command[]={128};//passive 
+>>>>>>> 2f96f161bd9a0a73f49660338be085e86cfed43b
 		if (write(fd,command, sizeof(command))==-1){
 	 		perror("mode set failed");
 	 		return -1;
@@ -99,7 +118,11 @@ int serial::setMode(int mode){
 
 /*stops robot I/O*/
 int serial::stopIO(){
+<<<<<<< HEAD
 	uint8_t command[]={173};
+=======
+	unsigned char command[]={173};
+>>>>>>> 2f96f161bd9a0a73f49660338be085e86cfed43b
 	if(write(fd, command, sizeof(command))==-1){
 		perror("robot failed to close I/O ");
 		return -1;
@@ -111,7 +134,11 @@ int serial::stopIO(){
 
 /*powers down robot*/
 int serial::off(){
+<<<<<<< HEAD
 	uint8_t command[]={128,133};
+=======
+	unsigned char command[]={128,133};
+>>>>>>> 2f96f161bd9a0a73f49660338be085e86cfed43b
 	if(write(fd, command, sizeof(command))==-1){
 		perror("robot failed to power off ");
 		return -1;

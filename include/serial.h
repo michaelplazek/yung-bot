@@ -9,7 +9,10 @@
 #include <stdlib.h>
 #include <string> 
 #include <limits.h> 
+<<<<<<< HEAD
 #include <stdint.h>
+=======
+>>>>>>> 2f96f161bd9a0a73f49660338be085e86cfed43b
 
 
 
